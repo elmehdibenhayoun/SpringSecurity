@@ -1,19 +1,22 @@
-# Tp4-java-Spring-Security
-## Introduction
-Ce document explore l'implémentation de trois stratégies d'authentification fournies par Spring Security : InMemoryAuthentication, JdbcAuthentication, et UserDetailsService. Chacune de ces approches présente des avantages spécifiques, permettant aux développeurs de choisir la solution la mieux adaptée aux besoins de leur application. 
-Du stockage en mémoire des informations d'authentification à l'utilisation d'une base de données relationnelle, en passant par la personnalisation avec un service utilisateur dédié, nous examinerons comment ces stratégies peuvent être mises en œuvre pour renforcer la sécurité d'une application Java.
+##Rapport sur l'Implémentation de Spring Security
+##Introduction
+Ce rapport documente l'implémentation de Spring Security dans le cadre d'une application. L'objectif principal de l'intégration de Spring Security est d'assurer la sécurité des données sensibles et de contrôler l'accès aux différentes fonctionnalités de l'application.
 
-## Enoncé
-Récupérer le code source de l'application non sécurisé qui permet de gérer les patients (résultat de l'activité pratique N°3). Le code source de cette application se trouve dans le repository suivant : https://github.com/mohamedYoussfi/unsecured-hospital-app.git
-Sécuriser cette application en intégrant un système d'authentification basé sur Spring security avec les trois stratégies : InMemoryAuthentication, JdbcAuthentication et UserDetailsService
+##Mise en Place de l'Entité Patient
+Pour commencer, une entité "Patient" a été créée dans le système. Cette entité est associée à un repository, qui gère la persistance des données liées aux patients. L'utilisation d'un repository permet d'effectuer des opérations de base telles que la sauvegarde, la mise à jour et la suppression des informations des patients.
 
-## Captures d'écran
+Contrôleur CRUD pour l'Entité Patient
+Un contrôleur a été développé pour gérer les opérations CRUD (Create, Read, Update, Delete) sur l'entité Patient. Ce contrôleur expose différentes méthodes en utilisant les annotations @GetMapping pour permettre l'accès aux ressources associées aux patients.
 
-### Authentification
+Implémentation de la Sécurité avec Spring Security
+Configuration des Entités de Sécurité
+Un module de sécurité a été intégré dans l'application, comprenant des entités spécifiques telles que les services et les repositories dédiés à la gestion des informations de sécurité. Cela inclut probablement des détails tels que les utilisateurs, les rôles et les autorisations.
 
+Configuration de Spring Security
+La classe SecurityConfig a été créée pour configurer Spring Security. Cette classe joue un rôle crucial dans la définition des règles d'accès, des stratégies d'authentification et d'autorisation pour l'ensemble de l'application.
 
-### Partie user
+Configuration des Propriétés de l'Application
+La configuration des propriétés de l'application a été ajustée pour prendre en compte les paramètres spécifiques à Spring Security. Cela pourrait inclure des informations telles que les mécanismes d'authentification, les chemins sécurisés et les détails de l'utilisateur par défaut.
 
-
-### Partie admin
-
+Vue HTML avec Thymeleaf
+En plus de la couche backend, des vues HTML ont été créées en utilisant Thymeleaf pour fournir une interface utilisateur conviviale. Ces vues sont intégrées aux fonctionnalités de sécurité pour garantir une expérience utilisateur sécurisée.
