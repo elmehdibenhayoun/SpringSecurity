@@ -20,4 +20,4 @@ La configuration des propriétés de l'application a été ajustée pour prendre
 
 Vue HTML avec Thymeleaf
 En plus de la couche backend, des vues HTML ont été créées en utilisant Thymeleaf pour fournir une interface utilisateur conviviale. Ces vues sont intégrées aux fonctionnalités de sécurité pour garantir une expérience utilisateur sécurisée.
-(secured-hopital-app-main/capture/auth.png)
+
